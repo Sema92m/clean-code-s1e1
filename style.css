@@ -57,7 +57,7 @@ input,
   outline: none;
 }
 
-.btn {
+button {
   background: none;
   border: 0px;
   color: #888;
@@ -166,6 +166,6 @@ ul li input[type=text] {
   width: 224px;
 }
 
-.edit-mode .task-item__title {
+.edit-mode label {
   display: none;
 }
