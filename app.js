@@ -37,9 +37,11 @@ var createNewTaskElement = function (taskString) {
 
 var addTask = function () {
   console.log("Add Task...");
+
   //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
   var listItem = createNewTaskElement(taskInput.value);
+  
   //Append listItem to incompleteTaskHolder
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
@@ -47,7 +49,6 @@ var addTask = function () {
 };
 
 //Edit an existing task.
-
 var editTask = function () {
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
@@ -103,7 +104,6 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector(".btn-edit");
   var deleteButton = taskListItem.querySelector(".btn-delete");
-
   editButton.onclick = editTask;
   deleteButton.onclick = deleteTask;
   checkBox.onchange = checkBoxEventHandler;
