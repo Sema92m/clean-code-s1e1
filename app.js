@@ -20,10 +20,12 @@ var createNewTaskElement = function (taskString) {
   editInput.type = "text";
   editInput.className = "task";
 
-  editButton.innerText = "Edit";
-  editButton.className = "btn-edit";
+  listItem.className = "task-item";
 
-  deleteButton.className = "btn-delete";
+  editButton.innerText = "Edit";
+  editButton.className = "btn btn-edit";
+
+  deleteButton.className = "btn btn-delete";
   deleteButtonImg.src = "./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 
